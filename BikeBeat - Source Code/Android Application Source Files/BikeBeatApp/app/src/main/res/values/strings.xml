@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BikeBeat</string>
+    <string name="view_all_btn">View Records</string>
+    <string name="title_activity_fuel">FuelActivity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="txt_btn">GET DIRECTIONS</string>
+    <string name="txt_dstn">Destination Point(city,state,country)</string>
+    <string name="txt_start">Starting Point (city,state,country)</string>
+    <string name="str_info">space(\" \") must be replaced with \"+\".For example Jersey City must be replaced with Jersey+City</string>
+
+    <string name="title_activity_splash_screen">BikeBeat</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><!--<resources>
+
+    <color name="hintColor">#dad8d8</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#fff</color>
+    <color name="colorlabel">#fff</color>
+    <color name="background">#BDBDBD</color>
+    <color name="bar">#212121</color>
+    <color name="bardark">#000000</color>
+    <color name="elementscard">#424242</color>
+    <color name="elements">#50424242</color>
+</resources>-->
+<resources>
+
+    <color name="hintColor">#dad8d8</color>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#000</color>
+    <color name="colorlabel">#000</color>
+    <color name="background">#212121</color>
+    <color name="bar">#000</color>
+    <color name="bardark">#000</color>
+    <color name="elementsimage">#424242</color>
+    <color name="elementscard">#bcbabe</color>
+    <color name="elements">#424242</color>
+    <color name="elementstext">#fff</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>

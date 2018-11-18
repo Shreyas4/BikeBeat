@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:screenOrientation="portrait"
+    tools:context="com.bike.beat.application.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="395dp"
+        android:layout_height="56dp"
+        android:background="@color/bar"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:title="@string/app_name"
+        android:titleTextColor="#fff"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="@string/app_name"
+        app:titleTextColor="@android:color/white"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <ImageButton
+            android:id="@+id/geo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/elementsimage"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/direction" />
+
+
+        <ImageButton
+            android:id="@+id/button_view_records"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/elementsimage"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/combochart" />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimaryDark"
+        app:cardBackgroundColor="@color/elementscard"
+        app:cardElevation="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.637">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date_val"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="serif"
+                    android:text="--"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                    android:textColor="@color/colorlabel"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+
+
+                            <TextView
+                                android:id="@+id/Fuel_average_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/date_label"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="Fuel Average"
+                                android:textColor="@color/colorlabel"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/fuel_consumed_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/Fuel_average_label"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="Fuel Consumed"
+                                android:textColor="@color/colorlabel"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/curr_fuel_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/fuel_consumed_label"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="Current Fuel"
+                                android:textColor="@color/colorlabel"
+                                android:textSize="15sp" />
+
+
+                            <TextView
+                                android:id="@+id/avg_speed_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/curr_fuel_label"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="Average Speed"
+                                android:textColor="@color/colorlabel"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/time_taken_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/avg_speed_label"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="Time Taken"
+                                android:textColor="@color/colorlabel"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/distcovered_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/time_taken_label"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="Distance Covered"
+                                android:textColor="@color/colorlabel"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <TextView
+                                android:id="@+id/fuel_avg_val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/date_val"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="--"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/fuel_consumed_val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/fuel_avg_val"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="--"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/cur_fuel_val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/fuel_consumed_val"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="--"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/avg_speed_val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cur_fuel_val"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="--"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/time_taken_val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/avg_speed_val"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="--"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/dist_cov_val"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/time_taken_val"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="20dp"
+                                android:fontFamily="serif"
+                                android:text="--"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="8dp">
+
+
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@color/elements"
+            android:elevation="10dp"
+            android:text="Start"
+            android:textAllCaps="false"
+            android:textColor="@color/elementstext"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="519dp" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@color/elements"
+            android:elevation="10dp"
+            android:text="Stop"
+            android:textAllCaps="false"
+            android:textColor="@color/elementstext"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="511dp" />
+
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
